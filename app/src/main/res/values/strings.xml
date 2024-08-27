@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Doumi</string>
+    <string name="back_button">Back</string> <!-- 뒤로가기 버튼 설명 -->
+    <string name="walkitalki_button">Walkie Talkie</string> <!-- walkitalki 버튼 설명 -->
+</resources>

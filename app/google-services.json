@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "598002670343",
+    "project_id": "doumi-216f5",
+    "storage_bucket": "doumi-216f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:598002670343:android:3223d7cec3b20bcfad43a2",
+        "android_client_info": {
+          "package_name": "com.example.doumi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQByRn9iwbYGlPOGigpnCwBSLyFt4u7QM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
