@@ -56,6 +56,6 @@ public class CameraActivity extends AppCompatActivity {
         });
 
         // Flask 서버 URL
-        webView.loadUrl("http://192.168.17.248:5000/"); // 실제 서버 IP 주소 사용
+        webView.loadUrl("http://192.168.219.108:5000/"); // 실제 서버 IP 주소 사용
     }
 }
