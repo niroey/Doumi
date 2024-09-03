@@ -7,10 +7,12 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.util.Log;
+import android.widget.ImageView;
 
 public class CameraActivity extends AppCompatActivity {
 
     private WebView webView;
+    private ImageView backButton;
     private static final String TAG = "CameraActivity";
 
     @SuppressLint({"SetJavaScriptEnabled", "MissingInflatedId"})
@@ -18,6 +20,9 @@ public class CameraActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera); // 변경: activity_main -> activity_camera
+
+        backButton = findViewById(R.id.back_button);
+        backButton.setOnClickListener(v -> onBackPressed());
 
         webView = findViewById(R.id.webview);
         if (webView == null) {

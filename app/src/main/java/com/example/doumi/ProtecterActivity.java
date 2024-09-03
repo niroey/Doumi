@@ -3,12 +3,15 @@ package com.example.doumi;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ProtecterActivity extends AppCompatActivity {
 
     private ImageButton cameraButton;
     private ImageButton mapButton;
+    private ImageView backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +21,9 @@ public class ProtecterActivity extends AppCompatActivity {
         // UI 요소들 초기화
         cameraButton = findViewById(R.id.camera_button);
         mapButton = findViewById(R.id.map_button);
+
+        backButton = findViewById(R.id.back_button);
+        backButton.setOnClickListener(v -> onBackPressed());
 
         // 버튼 클릭 이벤트 설정
         cameraButton.setOnClickListener(v -> openCameraActivity());

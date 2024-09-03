@@ -5,7 +5,11 @@ import android.os.Bundle;
 import android.speech.RecognitionListener;
 import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -38,7 +42,26 @@ public class UserActivity extends AppCompatActivity {
 
         backButton.setOnClickListener(v -> onBackPressed());
 
-        walkitalkiButton.setOnClickListener(v -> startSpeechRecognition());
+        walkitalkiButton.setOnClickListener(v -> {
+            showToastMessage();  // Custom Toast message
+            startSpeechRecognition();  // Start speech recognition
+        });
+    }
+
+    private void showToastMessage() {
+        // Inflate the custom layout for the Toast
+        LayoutInflater inflater = getLayoutInflater();
+        View layout = inflater.inflate(R.layout.custom_toast_layout, null);
+
+        // Set the text for the Toast
+        TextView text = layout.findViewById(R.id.toast_text);
+        text.setText("해당 목적지로 안내하겠습니다");
+
+        // Create and show the Toast
+        Toast toast = new Toast(getApplicationContext());
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setView(layout);
+        toast.show();
     }
 
     private void startSpeechRecognition() {
